@@ -1,0 +1,152 @@
+body {
+  background: #fffff8;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  margin: 0;
+}
+
+#app {
+  display: grid;
+  grid-auto-rows: minmax(50px, auto);
+  /* grid-template-columns:  */
+  height: 90vh;
+  grid-template-areas:
+    "hd hd hd hd"
+    "sub sub sub sub"
+    "zip zip res res"
+    "feel feel res res"
+    "gen gen gen gen";
+  background: #ff5722;
+  color: #ffc107;
+  justify-content: center;
+  grid-gap: 50px;
+  padding: 20px;
+  font-size: 20px;
+  font-family: "Oswald", sans-serif;
+}
+
+.holder {
+  color: #f6ff75;
+  font-size: 2em;
+}
+
+.entry {
+  margin: 40px 0 -10px;
+  background: #00bcd4;
+  grid-area: res;
+}
+
+#entryHolder {
+}
+
+/* #date {
+} */
+
+/* #temp {
+} */
+/* 
+#content {
+} */
+
+.headline {
+  color: #ffffff;
+  font-size: 2.5em;
+  grid-area: hd;
+}
+
+.sub {
+  font-size: 1.3em;
+  color: #ffffff;
+  grid-area: sub;
+}
+
+.zip {
+  grid-area: zip;
+}
+
+.feel {
+  grid-area: feel;
+}
+
+.generate {
+  grid-area: gen;
+}
+
+.title {
+  padding: 0 10px;
+  font-size: 1.1em;
+}
+
+.footer p {
+  padding-left: 15px;
+}
+
+/*  Basic Styling To Override Default For Basic HTML Elements */
+label {
+  display: flex;
+  font-size: 27px;
+}
+
+input {
+  display: flex;
+  height: 60px;
+  width: 400px;
+  background: #00bcd4;
+  color: #f0d43a;
+  font-size: 20px;
+  font-family: "Oswald", sans-serif;
+  border: none;
+}
+
+button {
+  width: 400px;
+  height: 100px;
+  background: #3b4a6b;
+  color: #f0d43a;
+  font-size: 26px;
+  font-family: "Oswald", sans-serif;
+  border: none;
+  box-shadow: 2px 4px 5px #444;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: #1c7a7a;
+  transition: 400ms;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+textarea {
+  width: 395px;
+  background: #00bcd4;
+  color: #f0d43a;
+  font-size: 20px;
+  font-family: "Oswald", sans-serif;
+}
+/* Reset style for HTML element on active to have no border*/
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+}
+/* Style for Placeholder Text*/
+::placeholder {
+  /* Firefox, Chrome, Opera */
+  color: #f0d43a;
+  font-family: "Oswald", sans-serif;
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #f0d43a;
+  font-family: "Oswald", sans-serif;
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #f0d43a;
+  font-family: "Oswald", sans-serif;
+}
