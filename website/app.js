@@ -1,18 +1,10 @@
-// cors workaround due to no localhost support when running in web
-const corsFix = "https://cors-anywhere.herokuapp.com/"
-
 /* Global Variables */
 const owmAppKey = '2e3f5bd7564a71e84934e70a7dc2eed1';
 const owmBaseURL = 'api.openweathermap.org/data/2.5';
+
 //Get request to fetch weather data
 const getTemp = async (url, zipcode, appKey) => {
-    const response = await fetch(`${corsFix}http://${url}/weather?zip=${zipcode},AU&APPID=${appKey}&units=metric`, {
-        method: 'GET',
-        headers: {
-            'X-RapidAPI-Key': appKey,
-            'X-RapidAPI-Host': url
-        },
-    });
+    const response = await fetch(`http://${url}/weather?zip=${zipcode},AU&APPID=${appKey}&units=metric`);
     try {
         const weatherData = await response.json();
         console.log(weatherData);
